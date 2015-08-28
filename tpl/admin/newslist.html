@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>某管理系统</title>
+<link href="web/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="web/css/index.css">
+
+<!--[if lt IE 9]>
+<script src="js/html5shiv.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+<style>
+</style>
+
+</head>
+
+<body>
+<div class="header">
+  <div class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          后台新闻管理面板
+        </a>
+        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="src-only"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <!--存在下拉选项会出现滚动条现象，待解决-->
+      <div class="collapse navbar-collapse navbar-self">
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="#">首页</a>
+          </li>
+          <li><a href="index.php">查看网站</a></li>
+        </ul>
+        <div class="navbar-right user">
+          <span class="col-md-4">{$username}</span>
+          <div class="col-md-8 logout"><a href="admin.php?controller=login&method=loginout">退出登录</a></div>
+        </div>
+      </div>
+    </div>   
+  </div>
+</div>
+<div class="main">
+  <div class="col-md-2 sidebar">
+    <div class="sidebar-header">
+      <h3><a href="">后台管理中心</a></h3>
+    </div>
+    <button class="btn btn-primary sidebar-btn" type="button">
+      点击展开
+    </button>
+    <ul class="nav nav-sidebar">
+      <li class="list-group-item dropdown active"><a href="#">首页</a></li>
+      <li class="list-group-item">新闻管理</li>
+      <li class="list-group-item"><a href="admin.php?controller=news&method=newsadd">添加新闻</a></li>
+      <li class="list-group-item"><a href="admin.php?controller=news&method=newslist">管理新闻</a></li>
+    </ul>
+  </div>
+  <div class="col-md-10 main-content">
+      <div class="content-title">
+        <h3>新闻管理列表</h3>
+      </div>
+      <div class="news-list">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>标题</th>
+              <th>作者</th>
+              <th colspan="2">操作</th>
+            </tr>
+          </thead>
+          <tbody>
+          {foreach $data as $value}
+            <tr>
+              <th>{$value.id}</th>
+              <th>{$value.title}</th>
+              <th>{$value.author}</th>
+              <th><a href="admin.php?controller=news&method=newsadd&id={$value.id}">编辑</a></th>
+              <th><a href="admin.php?controller=news&method=newsdel&id={$value.id}">删除</a></th>
+            </tr>
+            {foreachelse}
+				<tr>
+					<th colspan="4">
+						暂无新闻
+					</th>
+				</tr>
+			{/foreach}
+          </tbody>
+        </table>
+      </div>
+  </div>
+</div>
+
+<script src="web/js/jquery-1.9.1.min.js"></script>
+<script src="web/js/index.js"></script>
+<script src="web/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+@charset "utf-8";
+@font-face {
+	font-family: Glyphicons;
+	src: url("../fonts/glyphicons-halflings-regular.ttf") format('truetype');
+}
+html,body,div,form,input,span,button,h3 {
+	margin: 0;
+	padding: 0;
+}
+html,body {
+	width: 100%;
+	height: 100%;
+	min-width: 620px;
+}
+html {
+	overflow-y: auto;
+}
+body {
+	font-size: 12px;
+	font-family: '微软雅黑';
+	font-weight: normal;
+	background-color: #f3f7fb;
+	position: absolute;
+	top: 0;
+}
+.container {
+	width: 500px;
+	margin: auto;
+	padding: 0 10px;
+	position: relative;
+	top: 15%;
+}
+@media screen and (max-width: 620px) {
+  html,body {
+    width: 100%;
+    min-width: 400px;
+    overflow: hidden;
+  }
+  .container {
+    width: 60%;
+  }
+  div.container > .login {
+    width: 315px;
+    margin-right:0;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 10px 0;
+    border:1px solid #b1b8c3;
+    border-radius: 5px;
+  }
+}
+.container > .login {
+	width: auto;
+	margin-right: 49px;
+	margin-left: 49px;
+	margin-top: 47px;
+	padding: 10px 0;
+	border:1px solid #b1b8c3;
+	border-radius: 5px;
+}
+.container > .login > .login-title {
+	width: auto;
+	height: 52px;
+	padding-top: 15px;
+	border-bottom:1px solid #b1b8c3;
+	background:-webkit-gradient(linear, 0 0, 0 100%, from(#f3f7fb), to(#cbd5dd));
+}
+.login > .login-title > h3 {
+	width: auto;
+	padding: 5px 0;
+	text-align: center;
+	color: #a0aab6;
+	font-family: 'Arial';
+	font-size: 1.4em;
+}
+.login > .login-body {
+	width: auto;
+	padding: 10px 40px;
+  padding-bottom: 0;
+	margin: 10px auto;
+  margin-bottom: 0;
+}
+.login > .login-body div,
+.login > .login-body button {
+	width: auto;
+	margin: 20px 0;
+}
+.login > .login-body div {
+	padding: 10px 20px;
+	border: 1px solid #afb9b3;
+	border-radius: 3px;
+}
+.login > .login-body input {
+  width: 85%;
+	border: none;
+	outline: none;
+	font-size: 1.6em;
+	color: #b9c0cd;
+  background-color: inherit;
+}
+.glyphicons {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+	font-family: 'Glyphicons';
+	font-style: normal;
+ 	font-weight: 400;
+  font-size: 1.6em;
+	line-height: 1;
+  color: #c9d5de;
+	-webkit-font-smoothing: antialiased;
+  float: right;
+}
+.glyphicons-user:before {
+  content: "\e008";
+}
+.glyphicons-lock:before {
+  content: "\e033";
+}
+.login > .login-body button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#3c92f2), to(#145ac2));
+  font-size: 1.6em;
+  cursor: pointer;
+}
+.login > .login-body button:hover {
+  opacity: 0.9;
+}
+.login > .login-body button:active {
+  opacity: 0.9;
+}
+.login > .login-others {
+  width: 75%;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+.login > .login-others > .remenber-password {
+  float: right;
+}
+.login-others > .remenber-password > span {
+  color: #969ea4;
+  font-size: 1.2em;
+}
+.login > .login-others > .forget-password {
+  float: left;
+}
+.login > .login-others a,
+.login > .login-others a:hover,
+.login > .login-others a:active {
+  text-decoration: none;
+  color: #969ea4;
+  font-size: 1.2em;
+}
+.login > .login-others:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  content: '.'; 
+  clear: both;
+}

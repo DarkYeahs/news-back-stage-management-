@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="web/css/login.css">
+  <script src="web/js/jQuery.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="login">
+			<div class="login-title">
+				<h3>Admin Panel Login</h3>
+			</div>
+			<div class="login-body">
+				<form method="post" action="http://localhost/news/admin.php?controller=login&&method=login">
+					<div class="login-account">
+						<input type="text" placeholder="User ID" name="username"/>
+						<span class="glyphicons glyphicons-user"></span>
+					</div>
+					<div class="login-password">
+						<input type="password" placeholder="Password" name="password" /><span class="glyphicons glyphicons-lock"></span>
+					</div>
+					<button type="submit" class="btn btn-submit">Login</button>
+				</form>
+			</div>
+			<div class="login-others">
+				<div class="forget-password"><a href="">Forgot Password?</a></div>
+				<div class="remenber-password"><input type="checkbox" /><span>Remember Me</span></div>
+			</div>
+		</div>
+	</div>
+  <script src="web/js/index.js"></script>
+</body>
+</html>

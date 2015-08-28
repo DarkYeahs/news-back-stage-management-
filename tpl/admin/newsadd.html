@@ -42,7 +42,7 @@
         </ul>
         <div class="navbar-right user">
           <span class="col-md-4">{$username}</span>
-          <div class="col-md-8 logout"><a href="admin.php?controller=login&method=loginout">退出登录</a></div>
+          <div class="col-md-8 logout"><a href="admin.php?controller=login&amp;method=loginout">退出登录</a></div>
         </div>
       </div>
     </div>   
@@ -59,8 +59,8 @@
     <ul class="nav nav-sidebar">
       <li class="list-group-item dropdown active"><a href="#">首页</a></li>
       <li class="list-group-item">新闻管理</li>
-      <li class="list-group-item"><a href="admin.php?controller=news&method=newsadd">添加新闻</a></li>
-      <li class="list-group-item"><a href="admin.php?controller=news&method=newslist">管理新闻</a></li>
+      <li class="list-group-item"><a href="admin.php?controller=news&amp;method=newsadd">添加新闻</a></li>
+      <li class="list-group-item"><a href="admin.php?controller=news&amp;method=newslist">管理新闻</a></li>
     </ul>
   </div>
   <div class="col-md-10 main-content">
@@ -68,7 +68,7 @@
         <h3>发表新文章</h3>
       </div>
       <div class="form-main">
-        <form name="news" method="post" action="admin.php?controller=news&method=newsadd">
+        <form name="news" method="post" action="admin.php?controller=news&amp;method=newsadd">
           <table class="table table-bordered">
             <tbody>
               <tr><th colspan="2"><span>标题</span><input name="title" type="text"  value="{$data.title|default:''}"></th></tr>
